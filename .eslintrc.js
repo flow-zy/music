@@ -37,6 +37,9 @@ module.exports = {
     'arrow-spacing': 'error', // 要求箭头函数的=>前后有空格
     'no-var': 'error', // 要求使用let或const，而不是var
     'prefer-template': 'error', // 使用模板字符串，而不是字符串拼接
-    'rest-spread-spacing': 'error' // 扩展运算符...和表达式之间不允许有空格
+    'rest-spread-spacing': 'error', // 扩展运算符...和表达式之间不允许有空格
+    '@typescript-eslint/semi': 'off',
+    '@typescript-eslint/camelcase': 'off',
+    '@typescript-eslint/no-explicit-any': ['off'] // 新增这句话，关闭any报错
   }
 }
