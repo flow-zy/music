@@ -1,6 +1,8 @@
 const { defineConfig } = require('@vue/cli-service')
 const { resolve } = require('path')
 const AutoImport = require('unplugin-auto-import/webpack')
+const Components = require('unplugin-vue-components/webpack')
+const { AntDesignVueResolver } = require('unplugin-vue-components/resolvers')
 const { VUE_BASE_URL, VUE_BASE_PORT, VUE_BASE_API, PORT = 6000 } = process.env
 module.exports = defineConfig({
   transpileDependencies: true,
@@ -20,6 +22,13 @@ module.exports = defineConfig({
       AutoImport({
         imports: ['vue', 'vue-router'],
         dts: 'auto-import.d.ts'
+      }),
+      Components({
+        dts: true,
+        dirs: ['./src/views', './src/components'],
+        resolvers: [
+          AntDesignVueResolver({ importStyle: true, resolveIcons: true })
+        ]
       })
     ],
     resolve: {
