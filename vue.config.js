@@ -17,6 +17,20 @@ module.exports = defineConfig({
       }
     }
   },
+  css: {
+    loaderOptions: {
+      less: {
+        lessOptions: {
+          modifyVars: {
+            'primary-color': 'rgb(30, 206, 155)',
+            'link-color': 'rgb(30, 206, 155)',
+            'border-radius-base': '2px'
+          },
+          javascriptEnabled: true
+        }
+      }
+    }
+  },
   configureWebpack: {
     plugins: [
       AutoImport({

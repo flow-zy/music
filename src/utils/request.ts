@@ -37,9 +37,7 @@ instance.interceptors.response.use(
   }
 )
 export default (options: Options): Promise<any> => {
-  const { params, methods } = options
   return instance({
-    ...options,
-    [methods.toUpperCase() === 'GET' ? 'params' : 'data']: params
+    ...options
   })
 }

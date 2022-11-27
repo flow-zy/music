@@ -1,4 +1,19 @@
-//  @import "tailwindcss/base"; 
-@import 'reset-css';
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";
+html,body{
+height: auto !important;
+}
+input{
+    background: none !important;
+}
+// 侧边栏图标
+.ant-menu-item-icon{
+    display: flex;
+    align-items: center;
+    height: 30px;
+  }
+//   tabs
+.ant-tabs-tab-active {
+    border-color:rgb(30, 206, 155) !important;
+    .ant-tabs-tab-btn{
+    @apply text-emerald-400 !important;
+    }
+  }
